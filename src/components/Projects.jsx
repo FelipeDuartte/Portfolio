@@ -100,7 +100,7 @@ export default function Projects() {
   const fullstackProjects = [
     {
       title: "Beverage Distributor",
-      image: "/imagens/projectBebidas.png",
+      image: "./src/assets/projectBebidas.png",
       link: "#",
       description: "Website created for a beverage distributor.",
       features: [
@@ -114,6 +114,47 @@ export default function Projects() {
         { icon: "bi-filetype-css", name: "CSS3" },
         { icon: "bi-filetype-jsx", name: "React" },
         { icon: "bi-palette-fill", name: "Bootstrap" },
+      ],
+    },
+  ];
+
+ const backendProjects = [
+    {
+      title: "Automation python",
+      image: "./src/assets/Pageautomacao.png",
+      link: "https://github.com/FelipeDuartte/GeradorComprovantes",
+      description: "Autamation Excel + Word.",
+      features: [
+        "Automatic reading of Excel spreadsheets",
+        "Intelligent identification of columns",
+        "Individual generation of receipts per scholarship recipient",
+        "System packaged as an executable file ( .exe) for novice users",
+      ],
+      technologies: [
+        { icon: "bi-filetype-py", name: "Python" },
+        { icon: "bi bi-file-earmark-code", name: "Python-docx" },
+        { icon: "bi bi-file-earmark-code", name: "Tkinter" },
+        { icon: "bi bi-file-earmark-code", name: "Pandas" },
+      ],
+    },
+  ];
+
+const studyProjects = [
+    {
+      title: "Guesser Game",
+      image: "./src/assets/PageAdivinha.png",
+      link: "https://felipeduartte.github.io/SECRET_WORD/",
+      description: "React trainning API.",
+      features: [
+        "React API",
+        "React Router",
+        "dynamic word change",
+        "Score system",
+      ],
+      technologies: [
+        { icon: "bi-filetype-json", name: "JSON" },
+        { icon: "bi bi-filetype-jsx", name: "React" },
+        { icon: "bi bi-filetype-jsx", name: "React Context API" },
       ],
     },
   ];
@@ -148,6 +189,13 @@ export default function Projects() {
         >
           Back-end
         </button>
+
+        <button
+          className={activeTab === "study" ? "active" : ""}
+          onClick={() => setActiveTab("study")}
+        >
+          Study
+        </button>
       </nav>
 
       {/* FRONT-END */}
@@ -168,12 +216,21 @@ export default function Projects() {
         </div>
       )}
 
-      {/* BACK-END */}
+       {/* BACK-END */}
       {activeTab === "backend" && (
-        <div className="col-12 text-center bg-dark p-4 rounded-3 mt-4 w-50 m-auto">
-          <p className="text-secondary">
-            More back-end projects coming soon!
-          </p>
+        <div className="row g-4 justify-content-center mt-4">
+          {backendProjects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
+        </div>
+      )}
+
+      {/* STUDY PROJECTS */}
+      {activeTab === "study" && (
+        <div className="row g-4 justify-content-center mt-4">
+          {studyProjects.map((project, index) => (
+            <ProjectCard key={index} {...project} />
+          ))}
         </div>
       )}
     </section>
