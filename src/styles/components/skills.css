@@ -1,5 +1,81 @@
-.skills { background: transparent; }
-.skills-card { background: linear-gradient(180deg,#0f0f0f6c,#0b0b0b); border-radius:18px; padding:26px; border:1px solid rgba(255,255,255,0.06); position:relative }
-.skill-item{background:#0f0f0f;border-radius:14px;padding:18px 10px;text-align:center;border:1px solid rgba(255,255,255,0.05)}
-.skill-item img{width:52px;height:52px;margin-bottom:8px}
-.skill-item span{display:block;font-size:0.85rem;color:#d4d4d4}
+.skills {
+  background: transparent;
+}
+
+/* CARD */
+.skills-card {
+  background: linear-gradient(180deg, #0f0f0f6c, #0b0b0b);
+  border-radius: 18px;
+  padding: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.skills-card:hover {
+  transform: translateY(-4px);
+  border: 1px solid rgba(13, 110, 253, 0.35);
+  box-shadow: 0 10px 30px rgba(13, 110, 253, 0.12);
+}
+
+/* HEADER */
+.skills-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.skills-header i {
+  font-size: 1.4rem;
+  color: #0d6efd;
+}
+
+/* TÍTULO MAIS LEGÍVEL */
+.skills-header h5 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #f1f1f1;
+  letter-spacing: 0.5px;
+}
+
+/* ITEM */
+.skill-item {
+  background: #0f0f0f;
+  border-radius: 14px;
+  padding: 18px 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border 0.25s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+
+/* ÍCONE */
+.skill-item img {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 8px;
+  transition: transform 0.25s ease;
+}
+
+.skill-item:hover img {
+  transform: scale(1.08);
+}
+
+/* TEXTO */
+.skill-item span {
+  display: block;
+  font-size: 0.85rem;
+  color: #d4d4d4;
+  transition: color 0.25s ease;
+}
+
+.skill-item:hover span {
+  color: #ffffff;
+}
