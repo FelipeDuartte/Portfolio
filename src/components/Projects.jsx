@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import "../styles/components/Projects.css";
-
+import JornadaDev from "../assets/page-trilha.png";
+import Portfolio from "../assets/pagePortfolio.png";
+import Beverage from "../assets/projectBebidas.png";
+import Automation from "../assets/Pageautomacao.png";
+import Guesser from "../assets/PageAdivinha.png";
 function ProjectCard({
   title,
   image,
@@ -63,7 +67,7 @@ export default function Projects() {
   const frontendProjects = [
     {
       title: "JornadaDev",
-      image: "./src/assets/page-trilha.png",
+      image: JornadaDev,
       link: "https://felipeduartte.github.io/trilha-dev/",
       description: "Page designed to help developers who are starting out.",
       features: [
@@ -81,7 +85,7 @@ export default function Projects() {
     },
     {
       title: "Portfólio",
-      image: "./src/assets/pagePortfolio.png",
+      image: Portfolio,
       link: "#",
       description: "My personal developer portfolio.",
       features: [
@@ -102,7 +106,7 @@ export default function Projects() {
   const fullstackProjects = [
     {
       title: "Beverage Distributor",
-      image: "./src/assets/projectBebidas.png",
+      image: Beverage,
       link: undefined,
       description: "Website created for a beverage distributor.",
       features: [
@@ -124,7 +128,7 @@ export default function Projects() {
  const backendProjects = [
     {
       title: "Automation python",
-      image: "./src/assets/Pageautomacao.png",
+      image: Automation,
       link: "https://github.com/FelipeDuartte/GeradorComprovantes",
       description: "Autamation Excel + Word.",
       features: [
@@ -145,7 +149,7 @@ export default function Projects() {
 const studyProjects = [
     {
       title: "Guesser Game",
-      image: "./src/assets/PageAdivinha.png",
+      image: Guesser,
       link: "https://felipeduartte.github.io/SECRET_WORD/",
       description: "React trainning API.",
       features: [

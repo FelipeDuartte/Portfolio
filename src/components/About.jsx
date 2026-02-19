@@ -1,5 +1,6 @@
 import React from 'react'
 import "../styles/components/AboutMe.css"
+import myFoto from "../assets/my-foto.png"
 export default function About() {
   return (
     <section className="about-me" id="sobre-mim">
@@ -11,7 +12,7 @@ export default function About() {
 
         <div className="about-content d-flex justify-content-center align-items-start hidden">
           <div className="about-image text-center">
-            <img src="./src/assets/my-foto.png" alt="Felipe Duarte" className="profile-img" />
+            <img src={myFoto} alt="Felipe Duarte" className="profile-img" />
           </div>
 
           <div className="about-text text-left">
