@@ -23,9 +23,11 @@ function ProjectCard({
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="project-button btn btn-dark m-auto">
+            { !link ? <button className="project-button btn btn-dark m-auto text-secondary disabled">
+              Project under development <i className="px-3 bi bi-box-arrow-up-right" />
+            </button> : <button className="project-button btn btn-dark m-auto">
               Show Project <i className="px-3 bi bi-box-arrow-up-right" />
-            </button>
+            </button>}
           </a>
 
           <div className="legenda-projeto flex-grow-1">
@@ -101,7 +103,7 @@ export default function Projects() {
     {
       title: "Beverage Distributor",
       image: "./src/assets/projectBebidas.png",
-      link: "#",
+      link: undefined,
       description: "Website created for a beverage distributor.",
       features: [
         "Product catalog",
@@ -110,9 +112,10 @@ export default function Projects() {
         "Promotions system",
       ],
       technologies: [
-        { icon: "bi-filetype-html", name: "HTML5" },
-        { icon: "bi-filetype-css", name: "CSS3" },
+        { icon: "bi bi-gear", name: "API SupaBase" },
+        { icon: "bi bi-code-square", name: "Node.js" },
         { icon: "bi-filetype-jsx", name: "React" },
+        { icon: "bi bi-credit-card-2-front", name: "API Mercado Pago" },
         { icon: "bi-palette-fill", name: "Bootstrap" },
       ],
     },

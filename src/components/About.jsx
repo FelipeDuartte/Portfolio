@@ -16,7 +16,7 @@ export default function About() {
 
           <div className="about-text text-left">
             <h3>Hello, my name is <span className="highlight fw-bold">Felipe Duarte!</span></h3>
-            <p className="bio">Hello, I'm Felipe, 19 years old, a developer in continuous learning. I am interested in both front-end and back-end work, exploring different areas to become a more complete professional. I approach every project as an opportunity to grow, applying creativity, dedication and logic to turn ideas into functional, well-structured digital solutions.</p>
+            <p className="bio">Hello, I’m Felipe, a full-stack developer expanding my expertise in back-end development, built on a strong front-end foundation. I develop modern and scalable applications that solve real business problems, understanding the product from user experience to system architecture. I also build automation solutions to optimize processes, reduce manual work, and improve operational efficiency. I focus on security, performance, and maintainability to deliver efficient, strategic digital solutions designed to grow with the business.</p>
 
             <div className="services-section">
               <h3 className="services-title">Services I Offer</h3>
@@ -27,7 +27,7 @@ export default function About() {
                 <div className="service-card"><div className="service-icon"><i className="bi bi-search"/></div><h4>SEO & Performance</h4><p>Optimization for search engines</p></div>
                 <div className="service-card"><div className="service-icon"><i className="bi bi-search"/></div><h4>Integration between Systems</h4><p>Connecting different systems to ensure seamless data flow, efficiency, and reliable communication.</p></div>
               </div>
-              <div className="text-center"><a href="#contato" className="cta-button"><i className="bi bi-envelope"/> Request a Quote</a></div>
+              <div className="text-center"><a href="https://outlook.live.com/mail/0/deeplink/compose?to=Duarte.dev@outlook.com" className="cta-button"><i className="bi bi-envelope"/> Request a Quote</a></div>
             </div>
           </div>
         </div>
