@@ -17,7 +17,7 @@ export default function About() {
 
           <div className="about-text text-left">
             <h3>Hello, my name is <span className="highlight fw-bold">Felipe Duarte!</span></h3>
-            <p className="bio">Hello, I’m Felipe, a full-stack developer expanding my expertise in back-end development, built on a strong front-end foundation. I develop modern and scalable applications that solve real business problems, understanding the product from user experience to system architecture. I also build automation solutions to optimize processes, reduce manual work, and improve operational efficiency. I focus on security, performance, and maintainability to deliver efficient, strategic digital solutions designed to grow with the business.</p>
+            <p className="bio">Hello, I’m Felipe, a full-stack developer with a strong front-end foundation, expanding my expertise in back-end development. I build modern, scalable applications that solve real business problems, focusing on performance, security, and maintainability. I also create automation solutions to optimize processes and improve operational efficiency.</p>
 
             <div className="services-section">
               <h3 className="services-title">Services I Offer</h3>
