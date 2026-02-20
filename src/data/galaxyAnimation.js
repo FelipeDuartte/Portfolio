@@ -5,17 +5,18 @@ export async function initGalaxyAnimation() {
   const canvas = document.getElementById("galaxyCanvas");
   if (!canvas) return;
 
-  const ctx = canvas.getContext("2d", { 
+  const ctx = canvas.getContext("2d", {
     alpha: true,
-    desynchronized: true // Performance boost
+    desynchronized: true, // Performance boost
   });
-  
+
   let animationId;
   let isVisible = true;
 
   // Detectar dispositivo de baixa performance
-  const isLowPerformance = navigator.hardwareConcurrency <= 2 || 
-                          (/Android/i.test(navigator.userAgent) && window.innerWidth < 768);
+  const isLowPerformance =
+    navigator.hardwareConcurrency <= 2 ||
+    (/Android/i.test(navigator.userAgent) && window.innerWidth < 768);
 
   // Pré-carregar imagens dos meteoros
   await Meteor.preloadImages();
@@ -25,9 +26,9 @@ export async function initGalaxyAnimation() {
     canvas.height = window.innerHeight;
     Meteor.clearGradientCache();
   }
-  
+
   resize();
-  
+
   // Debounce no resize
   let resizeTimeout;
   window.addEventListener("resize", () => {
@@ -38,14 +39,15 @@ export async function initGalaxyAnimation() {
   const isMobile = window.innerWidth < 768;
 
   // ⭐ ESTRELAS - Reduzidas em dispositivos lentos
-  const starCount = isLowPerformance 
-    ? (isMobile ? 40 : 80)
-    : (isMobile ? 80 : 160);
-    
-  const stars = Array.from(
-    { length: starCount },
-    () => new Star(canvas)
-  );
+  const starCount = isLowPerformance
+    ? isMobile
+      ? 40
+      : 80
+    : isMobile
+      ? 80
+      : 160;
+
+  const stars = Array.from({ length: starCount }, () => new Star(canvas));
 
   // ☄ METEOROS - Apenas 1 meteoro sempre
   const meteors = [new Meteor(canvas, ctx, 0)];
@@ -86,8 +88,8 @@ export async function initGalaxyAnimation() {
 
   // Observador com threshold maior para dispositivos lentos
   const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
+    (entries) => {
+      entries.forEach((entry) => {
         isVisible = entry.isIntersecting;
 
         if (isVisible) {
@@ -98,7 +100,7 @@ export async function initGalaxyAnimation() {
         }
       });
     },
-    { threshold: isLowPerformance ? 0.25 : 0.1 }
+    { threshold: isLowPerformance ? 0.25 : 0.1 },
   );
 
   observer.observe(canvas);
@@ -111,6 +113,6 @@ export async function initGalaxyAnimation() {
       observer.disconnect();
       window.removeEventListener("resize", resize);
       Meteor.clearGradientCache();
-    }
+    },
   };
 }
