@@ -28,7 +28,7 @@ export default function About() {
                 <div className="service-card"><div className="service-icon"><i className="bi bi-search"/></div><h4>SEO & Performance</h4><p>Optimization for search engines</p></div>
                 <div className="service-card"><div className="service-icon"><i className="bi bi-search"/></div><h4>Integration between Systems</h4><p>Connecting different systems to ensure seamless data flow, efficiency, and reliable communication.</p></div>
               </div>
-              <div className="text-center"><a href="https://outlook.live.com/mail/0/deeplink/compose?to=Duarte.dev@outlook.com" className="cta-button"><i className="bi bi-envelope"/> Request a Quote</a></div>
+              <div className="text-center"><a href="https://wa.me/5531999450717" className="cta-button"><i className="bi bi-whatsapp"/> Request a Quote</a></div>
             </div>
           </div>
         </div>
