@@ -2,10 +2,8 @@ export class Star {
   constructor(canvas) {
     this.canvas = canvas;
 
-    // Alpha base mais forte (visibilidade)
     this.baseAlpha = Math.random() * 0.35 + 0.4;
 
-    // Pulsação ainda sutil
     this.pulseSpeed = Math.random() * 0.4 + 0.25;
     this.pulseOffset = Math.random() * Math.PI * 2;
 
@@ -16,10 +14,8 @@ export class Star {
     this.x = Math.random() * this.canvas.width;
     this.y = Math.random() * this.canvas.height;
 
-    // Estrelas continuam pequenas
     this.radius = Math.random() * 0.4 + 0.2;
 
-    // Movimento suave
     this.speed = Math.random() * 0.25 + 0.12;
 
     this.alpha = this.baseAlpha;
@@ -43,7 +39,6 @@ export class Star {
   draw(ctx) {
     ctx.save();
 
-    //  Glow maior, mas estrela ainda pequena
     const glow = this.radius * 3.5;
 
     const gradient = ctx.createRadialGradient(

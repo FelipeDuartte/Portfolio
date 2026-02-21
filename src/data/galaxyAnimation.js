@@ -19,19 +19,39 @@ export async function initGalaxyAnimation() {
 
   await Meteor.preloadImage();
 
+  function getViewportSize() {
+    if (window.visualViewport) {
+      return {
+        width: window.visualViewport.width,
+        height: window.visualViewport.height,
+      };
+    }
+    return {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+  }
+
   function resize() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    const { width, height } = getViewportSize();
+    canvas.width = width;
+    canvas.height = height;
     Meteor.clearGradientCache();
   }
 
   resize();
 
   let resizeTimeout;
-  window.addEventListener("resize", () => {
+  const onResize = () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(resize, 150);
-  }, { passive: true });
+  };
+
+  window.addEventListener("resize", onResize, { passive: true });
+
+  if (window.visualViewport) {
+    window.visualViewport.addEventListener("resize", onResize, { passive: true });
+  }
 
   const isMobile = window.innerWidth < 768;
   const starCount = isLowPerformance ? (isMobile ? 40 : 80) : (isMobile ? 80 : 160);
@@ -88,7 +108,10 @@ export async function initGalaxyAnimation() {
       clearTimeout(resizeTimeout);
       cancelAnimationFrame(animationId);
       observer.disconnect();
-      window.removeEventListener("resize", resize);
+      window.removeEventListener("resize", onResize);
+      if (window.visualViewport) {
+        window.visualViewport.removeEventListener("resize", onResize);
+      }
       Meteor.clearGradientCache();
     },
   };
