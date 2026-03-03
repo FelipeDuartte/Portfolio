@@ -1,6 +1,6 @@
 /* ========== SOBRE MIM ========== */
 .about-me {
-  padding: 6rem 1rem;
+  padding: 0rem 0rem 6rem 0rem !important;
   position: relative;
   overflow: hidden;
 }
