@@ -147,6 +147,24 @@ export default function Projects() {
   ];
 
 const studyProjects = [
+  {
+      title: "MiniBlog",
+      image: null,
+      link: null,
+      description: "Page designed to help developers who are starting out.",
+      features: [
+        "SPA (Single Page Application) navigation",
+        "Search for posts by hashtags",
+        "User registration and login",
+        "Dashboard with user posts",
+      ],
+      technologies: [
+        { icon: "bi bi-filetype-jsx", name: "React" },
+        { icon: "bi bi-fire", name: "Firebase Authentication" },
+        { icon: "bi-filetype-js", name: "APIs REST" },
+        { icon: "bi bi-fire", name: "Firestore Database" },
+      ],
+    },
     {
       title: "Guesser Game",
       image: Guesser,

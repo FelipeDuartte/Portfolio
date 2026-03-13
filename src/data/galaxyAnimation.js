@@ -1,7 +1,6 @@
 import { Star } from "./Star.js";
-import { Meteor } from "./Meteor.js";
 
-export async function initGalaxyAnimation() {
+export function initGalaxyAnimation() {
   const canvas = document.getElementById("galaxyCanvas");
   if (!canvas) return;
 
@@ -16,8 +15,6 @@ export async function initGalaxyAnimation() {
   const isLowPerformance =
     navigator.hardwareConcurrency <= 2 ||
     (/Android/i.test(navigator.userAgent) && window.innerWidth < 768);
-
-  await Meteor.preloadImage();
 
   function getViewportSize() {
     if (window.visualViewport) {
@@ -36,7 +33,6 @@ export async function initGalaxyAnimation() {
     const { width, height } = getViewportSize();
     canvas.width = width;
     canvas.height = height;
-    Meteor.clearGradientCache();
   }
 
   resize();
@@ -57,8 +53,6 @@ export async function initGalaxyAnimation() {
   const starCount = isLowPerformance ? (isMobile ? 40 : 80) : (isMobile ? 80 : 160);
   const stars = Array.from({ length: starCount }, () => new Star(canvas));
 
-  const meteor = new Meteor(canvas, ctx);
-
   const FPS = isLowPerformance ? 24 : 30;
   const interval = 1000 / FPS;
   let lastTime = 0;
@@ -78,9 +72,6 @@ export async function initGalaxyAnimation() {
       stars[i].update(time);
       stars[i].draw(ctx);
     }
-
-    meteor.update(time);
-    if (meteor.isVisible()) meteor.draw();
 
     animationId = requestAnimationFrame(animate);
   }
@@ -112,7 +103,6 @@ export async function initGalaxyAnimation() {
       if (window.visualViewport) {
         window.visualViewport.removeEventListener("resize", onResize);
       }
-      Meteor.clearGradientCache();
     },
   };
 }
