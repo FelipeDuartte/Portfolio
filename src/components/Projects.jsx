@@ -5,6 +5,7 @@ import Portfolio from "../assets/pagePortfolio.png";
 import Beverage from "../assets/projectBebidas.png";
 import Automation from "../assets/Pageautomacao.png";
 import Guesser from "../assets/PageAdivinha.png";
+import MiniBlog from "../assets/pageMiniBlog.png"
 function ProjectCard({
   title,
   image,
@@ -149,7 +150,7 @@ export default function Projects() {
 const studyProjects = [
   {
       title: "MiniBlog",
-      image: null,
+      image: MiniBlog,
       link: null,
       description: "Page designed to help developers who are starting out.",
       features: [
