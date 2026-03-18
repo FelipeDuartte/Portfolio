@@ -5,7 +5,7 @@ import Portfolio from "../assets/pagePortfolio.png";
 import Beverage from "../assets/projectBebidas.png";
 import Automation from "../assets/Pageautomacao.png";
 import Guesser from "../assets/PageAdivinha.png";
-import MiniBlog from "../assets/pageMiniBlog.png"
+import MiniBlog from "../assets/pageminiblog.png"
 function ProjectCard({
   title,
   image,
@@ -151,7 +151,7 @@ const studyProjects = [
   {
       title: "MiniBlog",
       image: MiniBlog,
-      link: null,
+      link: "https://github.com/FelipeDuartte/miniblog",
       description: "Page designed to help developers who are starting out.",
       features: [
         "SPA (Single Page Application) navigation",
