@@ -1,7 +1,10 @@
-/* ========== NAVBAR ========== */
+/* ========== NAVBAR | ELEGANT DARK ========== */
 .navbar {
   font-weight: 600;
-  background: radial-gradient(ellipse at top, #0d1a2f6e 0%, #000000 100%);
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #1f1f1f;
 }
 
 .navbar-nav {
@@ -11,7 +14,16 @@
 .navbar-nav .nav-link {
   position: relative;
   font-size: 1.1rem;
+  color: #555555;
   transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #d4d4d4;
+}
+
+.navbar-nav .nav-link.active {
+  color: #f5f5f5;
 }
 
 .navbar-nav .nav-link::after {
@@ -21,11 +33,13 @@
   left: 0;
   width: 0;
   height: 2px;
-  background-color: rgba(96, 165, 250, 0.4);
-  transition: width 0.3s;
+  background-color: #60a5fa;
+  border-radius: 2px;
+  transition: width 0.3s ease;
 }
 
-.navbar-nav .nav-link:hover::after {
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
   width: 100%;
 }
 /* ========== /NAVBAR ========== */

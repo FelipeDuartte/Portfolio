@@ -1,4 +1,4 @@
-/* ========== SOBRE MIM ========== */
+/* ========== SOBRE MIM | ELEGANT DARK ========== */
 .about-me {
   padding: 0rem 0rem 6rem 0rem !important;
   position: relative;
@@ -22,13 +22,14 @@
   z-index: 1;
 }
 
+/* ===== HEADER DA SEÇÃO ===== */
 .section-header {
   margin-bottom: 4rem;
   position: relative;
 }
 
 .section-subtitle {
-  color: #007bff;
+  color: #60a5fa;
   font-size: 0.9rem;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -55,11 +56,12 @@
   bottom: -10px;
   left: 0;
   width: 60px;
-  height: 4px;
-  background: linear-gradient(90deg, #007bff, #60a5fa);
+  height: 2px;
+  background: #60a5fa;
   border-radius: 2px;
 }
 
+/* ===== LAYOUT GERAL ===== */
 .about-content {
   display: flex;
   flex-wrap: wrap;
@@ -67,6 +69,7 @@
   align-items: flex-start;
 }
 
+/* ===== IMAGEM ===== */
 .about-image {
   position: relative;
   flex: 1 1 300px;
@@ -81,11 +84,7 @@
   left: -20px;
   right: 20px;
   bottom: 20px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 123, 255, 0.2),
-    rgba(96, 165, 250, 0.1)
-  );
+  background: rgba(96, 165, 250, 0.05);
   border-radius: 25px;
   z-index: 0;
   transition: all 0.4s ease;
@@ -96,11 +95,7 @@
   left: -25px;
   right: 25px;
   bottom: 25px;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 123, 255, 0.3),
-    rgba(96, 165, 250, 0.2)
-  );
+  background: rgba(96, 165, 250, 0.08);
 }
 
 .profile-img {
@@ -109,35 +104,35 @@
   height: 280px;
   object-fit: cover;
   border-radius: 25px;
-  border: 3px solid rgba(96, 165, 250, 0.4);
-  box-shadow: 0 20px 60px rgba(0, 123, 255, 0.3),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+  border: 1px solid #2a2a2a;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 1;
-  backdrop-filter: blur(10px);
 }
 
 .profile-img:hover {
   transform: scale(1.05) translateY(-5px);
-  box-shadow: 0 30px 80px rgba(0, 123, 255, 0.4),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-  border-color: rgba(96, 165, 250, 0.6);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  border-color: rgba(96, 165, 250, 0.3);
 }
 
+/* ===== TEXTO ===== */
 .about-text {
   flex: 2 1 500px;
 }
 
 .about-text h3 {
   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
-  color: #e0e7ff;
+  color: #f5f5f5;
   margin-bottom: 1.5rem;
   line-height: 1.4;
 }
 
 .highlight {
-  background: linear-gradient(135deg, #007bff, #60a5fa);
+  background: linear-gradient(135deg, #ffffff, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -147,19 +142,20 @@
 .bio {
   line-height: 1.8;
   margin-bottom: 2rem;
-  color: #cbd5e1;
+  color: #888888;
   font-size: 1.05rem;
 }
 
+/* ===== SERVIÇOS ===== */
 .services-section {
   margin-top: 2.5rem;
   padding-top: 2.5rem;
-  border-top: 1px solid rgba(96, 165, 250, 0.1);
+  border-top: 1px solid #1f1f1f;
 }
 
 .services-title {
   font-size: 1.4rem;
-  color: #e0e7ff;
+  color: #d4d4d4;
   margin-bottom: 2rem;
   font-weight: 600;
 }
@@ -172,8 +168,8 @@
 }
 
 .service-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(96, 165, 250, 0.1);
+  background: #111111;
+  border: 1px solid #2a2a2a;
   border-radius: 12px;
   padding: 1.5rem;
   text-align: center;
@@ -185,9 +181,10 @@
 }
 
 .service-card:hover {
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(96, 165, 250, 0.2);
+  background: #1a1a1a;
+  border-color: #3a3a3a;
   transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .service-icon {
@@ -197,58 +194,88 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 123, 255, 0.1);
+  background: #1f1f1f;
   border-radius: 10px;
+  border: 1px solid #2a2a2a;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
 
 .service-card:hover .service-icon {
-  background: rgba(0, 123, 255, 0.15);
+  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.2);
 }
 
 .service-icon i {
   font-size: 1.5rem;
+  color: #888888;
+  transition: color 0.3s ease;
+}
+
+.service-card:hover .service-icon i {
   color: #60a5fa;
 }
 
 .service-card h4 {
   font-size: 1.05rem;
-  color: #e0e7ff;
+  color: #d4d4d4;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .service-card p {
   font-size: 0.9rem;
-  color: #94a3b8;
+  color: #555555;
   line-height: 1.6;
   margin: 0;
 }
 
+/* ===== BOTÃO CTA ===== */
 .cta-button {
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   padding: 0.9rem 2rem;
-  background: #007bff;
-  color: white;
+  background: transparent;
+  color: #f5f5f5;
   text-decoration: none;
   border-radius: 8px;
+  border: 1px solid #3a3a3a;
   font-weight: 500;
   font-size: 1rem;
   transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.cta-button:hover::before {
+  left: 100%;
 }
 
 .cta-button:hover {
-  background: #0056b3;
+  border-color: #60a5fa;
+  color: #60a5fa;
   transform: translateY(-2px);
-  color: white;
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.1);
 }
 
-/* ========== Responsive ========== */
-
-/* Telas grandes - Layout em 2 linhas compactas */
+/* ========== RESPONSIVO ========== */
 @media screen and (min-width: 1200px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -281,7 +308,6 @@
   }
 }
 
-/* Telas médias-grandes */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
   .services-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -311,7 +337,6 @@
   }
 }
 
-/* Tablets */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -323,7 +348,6 @@
   }
 }
 
-/* Mobile */
 @media screen and (max-width: 767px) {
   .services-grid {
     grid-template-columns: 1fr;

@@ -7,8 +7,7 @@ import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import GalaxyCanvas from './components/GalaxyCanvas'
-
+import WaveBackground from './backgroundWaves/WaveBackground'
 import useScrollObserver from './hooks/useScrollObserver'
 import useScrollToTop from './hooks/useScrollToTop'
 
@@ -18,7 +17,7 @@ export default function App() {
 
   return (
     <>
-      <GalaxyCanvas />
+    <WaveBackground>
         <Navbar />
         <Header />   
           <About />
@@ -27,6 +26,7 @@ export default function App() {
           <Contact />     
         <Footer />
         <a href="#" id="scrollToTop" className="scroll-to-top text-white text-center">&#8679;</a>
+        </WaveBackground>
     </>
   )
 }

@@ -1,9 +1,8 @@
-/* ========== CONTATO ========== */
+/* ========== CONTATO | ELEGANT DARK ========== */
 .contato-section {
   padding: 60px 20px;
-  border-top: 3px solid;
-  border-image: linear-gradient(to right, #1528593f, transparent 40%) 1;
-  color: #bfbfbf;
+  border-top: 1px solid #1f1f1f;
+  color: #888888;
 }
 
 .contato-section.hidden {
@@ -19,14 +18,17 @@
   filter: blur(0);
 }
 
+/* ===== TÍTULO ===== */
 .h1-contato {
   color: transparent;
-  -webkit-text-stroke: 1.8px gray;
+  -webkit-text-stroke: 1.5px #60a5fa;
   font-weight: 900;
   font-size: 3em;
   margin-bottom: 30px;
+  transition: -webkit-text-stroke-color 0.3s ease;
 }
 
+/* ===== LAYOUT ===== */
 .contato-container {
   display: flex;
   flex-direction: column;
@@ -34,6 +36,7 @@
   align-items: center;
 }
 
+/* ===== FORMULÁRIO ===== */
 .form-contato {
   gap: 15px;
   width: 100%;
@@ -44,37 +47,72 @@
 .form-contato textarea {
   width: 100%;
   padding: 12px 15px;
-  border: none;
+  border: 1px solid #2a2a2a;
   border-radius: 8px;
-  background-color: #1b1b1b;
-  color: #f8f9fa;
+  background-color: #111111;
+  color: #f5f5f5;
   font-size: 1em;
-  transition: box-shadow 0.3s ease;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+  color: #555555;
 }
 
 .form-contato input:focus,
 .form-contato textarea:focus {
   outline: none;
-  box-shadow: 0 0 10px #007bff;
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.06);
 }
 
+/* ===== BOTÃO ===== */
 .form-contato button {
-  background-color: #152859;
-  color: white;
-  border: none;
+  background-color: #222020 ;
+  color: #f5f5f5;
+  border: 1px solid #3a3a3a;
   padding: 12px;
   border-radius: 8px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.form-contato button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.form-contato button:hover::before {
+  left: 100%;
 }
 
 .form-contato button:hover {
-  background-color: #192d75;
+  border-color: #60a5fa;
+  color: #60a5fa;
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.08);
+  transform: translateY(-1px);
 }
 
+/* ===== INFO ===== */
 .info-contato p {
   margin: 5px 0;
   font-size: 1.1em;
+  color: #f5f5f5;
 }
 /* ========== /CONTATO ========== */

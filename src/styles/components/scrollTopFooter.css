@@ -24,7 +24,7 @@
 }
 
 .footer {
-  background: radial-gradient(ellipse at bottom, #0d1a2f67 0%, #000000 100%);
+  background: transparent;
   color: #bfbfbf;
   padding: 20px 10px;
   font-size: 0.9em;
@@ -33,7 +33,7 @@
 }
 
 .footer strong {
-  color: #f39c12;
+  color: #60a5fa;
   font-weight: bold;
 }
 /* ========== /SCROLL TO TOP & FOOTER ========== */

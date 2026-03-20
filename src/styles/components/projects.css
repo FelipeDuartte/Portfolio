@@ -1,21 +1,21 @@
-/* ========== PROJETOS | MODERN ELEGANT ========== */
+/* ========== PROJETOS | ELEGANT DARK ========== */
 #projetos {
   padding: 6rem 0;
 }
 
-
+/* ===== NAV FILTROS ===== */
 .nav-projetos {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin: 2rem 0;
-  background-color: rgb(0, 0, 0);
+  background-color: transparent;
 }
 
 .nav-projetos button {
   background: none;
   border: none;
-  color: #aaa;
+  color: #555555;
   font-size: 1.1rem;
   font-weight: 600;
   cursor: pointer;
@@ -24,7 +24,6 @@
   transition: color 0.3s ease;
 }
 
-/* underline animado */
 .nav-projetos button::after {
   content: "";
   position: absolute;
@@ -32,27 +31,25 @@
   bottom: -6px;
   width: 0%;
   height: 2px;
-  background: #0d6efd; /* azul bootstrap */
+  background: #60a5fa;
   transition: width 0.3s ease;
 }
 
 .nav-projetos button:hover {
-  color: #fff;
+  color: #d4d4d4;
 }
 
 .nav-projetos button:hover::after {
   width: 100%;
 }
 
-/* link ativo */
 .nav-projetos button.active {
-  color: #0d6efd;
+  color: #60a5fa;
 }
 
 .nav-projetos button.active::after {
   width: 100%;
 }
-
 
 /* ===== TÍTULOS ===== */
 .DivTituloProjetos {
@@ -74,7 +71,7 @@
 .subtitulo-projetos {
   font-size: 1.4rem;
   margin-top: 3rem;
-  color: #e0e7ff;
+  color: #d4d4d4;
   font-weight: 600;
   position: relative;
   display: inline-block;
@@ -87,23 +84,22 @@
   bottom: 0;
   left: 0;
   width: 60px;
-  height: 3px;
-  background: linear-gradient(90deg, #007bff, #60a5fa);
+  height: 2px;
+  background: #60a5fa;
   border-radius: 2px;
 }
 
 /* ===== CARDS ===== */
 .card-projeto {
-  background: rgba(255, 255, 255, 0.02);
+  background: #111111;
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(96, 165, 250, 0.1);
+  border: 1px solid #2a2a2a;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   position: relative;
 }
 
-/* Borda animada sutil */
 .card-projeto::before {
   content: "";
   position: absolute;
@@ -112,8 +108,8 @@
   padding: 1px;
   background: linear-gradient(
     135deg,
-    rgba(96, 165, 250, 0.4),
-    rgba(0, 123, 255, 0.2)
+    rgba(96, 165, 250, 0.35),
+    rgba(255, 255, 255, 0.05)
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -125,8 +121,9 @@
 
 .card-projeto:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.2);
-  border-color: rgba(96, 165, 250, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border-color: #3a3a3a;
+  background: #1a1a1a;
 }
 
 .card-projeto:hover::before {
@@ -139,12 +136,11 @@
   height: 230px;
   object-fit: cover;
   object-position: center;
-  filter: brightness(0.9);
+  filter: brightness(0.85) grayscale(0.15);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
 }
 
-/* Telas médias (tablets) */
 @media (min-width: 768px) and (max-width: 991px) {
   .img-projeto {
     height: 280px;
@@ -152,7 +148,6 @@
   }
 }
 
-/* Telas grandes (desktop) */
 @media (min-width: 992px) {
   .img-projeto {
     height: 260px;
@@ -161,13 +156,13 @@
 
 .card-projeto:hover .img-projeto {
   transform: scale(1.03);
-  filter: brightness(1);
+  filter: brightness(1) grayscale(0);
 }
 
 /* ===== CONTEÚDO ===== */
 .legenda-projeto {
   padding: 1.8rem;
-  color: #e5e7eb;
+  color: #d4d4d4;
   position: relative;
   z-index: 1;
 }
@@ -176,12 +171,12 @@
   font-size: 1.35rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
-  color: #e0e7ff;
+  color: #f5f5f5;
   transition: color 0.3s ease;
 }
 
 .card-projeto:hover .card-titulo {
-  background: linear-gradient(135deg, #007bff, #60a5fa);
+  background: linear-gradient(135deg, #ffffff, #60a5fa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -191,7 +186,7 @@
 .legenda-projeto p {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #cbd5e1;
+  color: #888888;
   margin-bottom: 1.2rem;
 }
 
@@ -207,23 +202,23 @@
   font-size: 0.75rem;
   padding: 6px 14px;
   border-radius: 20px;
-  background: rgba(0, 123, 255, 0.1);
-  color: #93c5fd;
-  border: 1px solid rgba(96, 165, 250, 0.2);
+  background: #1f1f1f;
+  color: #888888;
+  border: 1px solid #2a2a2a;
   transition: all 0.25s ease;
   font-weight: 500;
 }
 
 .tecnologia-badge:hover {
-  background: rgba(0, 123, 255, 0.15);
-  border-color: rgba(96, 165, 250, 0.3);
+  background: rgba(96, 165, 250, 0.08);
+  border-color: rgba(96, 165, 250, 0.25);
+  color: #60a5fa;
   transform: translateY(-2px);
-  color: #bfdbfe;
 }
 
 /* ===== TEXTO AUXILIAR ===== */
 .text-secondary {
-  color: #94a3b8 !important;
+  color: #555555 !important;
   font-size: 0.9rem;
   font-style: italic;
 }
@@ -234,16 +229,16 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.9rem 2rem;
-  background: #007bff;
-  color: white;
+  background: transparent;
+  color: #f5f5f5;
   text-decoration: none;
   border-radius: 10px;
+  border: 1px solid #3a3a3a;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
   margin-top: 1rem;
 }
 
@@ -257,7 +252,7 @@
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.15),
+    rgba(255, 255, 255, 0.06),
     transparent
   );
   transition: left 0.5s ease;
@@ -269,9 +264,9 @@
 
 .project-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
-  color: white;
-  background: #0056b3;
+  border-color: #60a5fa;
+  color: #60a5fa;
+  box-shadow: 0 4px 20px rgba(96, 165, 250, 0.1);
 }
 
 .project-button i {
@@ -304,6 +299,4 @@
   .legenda-projeto {
     padding: 1.5rem;
   }
-
-
 }
