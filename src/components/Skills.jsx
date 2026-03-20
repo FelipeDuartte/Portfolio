@@ -8,11 +8,13 @@ import iconbootstrap from "../assets/iconbootstrap.png"
 import iconTailwind from "../assets/iconTailwind.png"
 import icongit from "../assets/icongit.png"
 import icongithub from "../assets/icongithub.webp"
-import iconN8N from "../assets/iconN8N.jpg"
+import supabase from "../assets/iconsupabase.webp"
 import iconpython from "../assets/iconpython.png"
 import iconnodejs from "../assets/iconnodejs.png"
 import iconmongodb from "../assets/iconmongodb.png"
 import iconmySQL from "../assets/iconmySQL.png"
+import firebase from "../assets/iconfirebase.png"
+import vercel from "../assets/iconvercel.webp"
 import usa from "../assets/usa.png"
 export default function Skills() {
   return (
@@ -39,8 +41,10 @@ export default function Skills() {
               <div className="row g-3">
                 <div className="col-4"><div className="skill-item"><img src={icongit}/><span>Git</span></div></div>
                 <div className="col-4"><div className="skill-item"><img src={icongithub}/><span>GitHub</span></div></div>
-                <div className="col-4"><div className="skill-item"><img src={iconN8N}/><span>N8N</span></div></div>
                 <div className="col-4"><div className="skill-item"><img src={usa}/><span>English</span></div></div>
+                <div className="col-4"><div className="skill-item"><img src={supabase}/><span>SupaBase</span></div></div>
+                <div className="col-4"><div className="skill-item"><img src={firebase}/><span>FireBase</span></div></div>
+                <div className="col-4"><div className="skill-item"><img src={vercel}/><span>Vercel</span></div></div>
               </div>
             </div>
           </div>

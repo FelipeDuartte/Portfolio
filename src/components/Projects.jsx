@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../styles/components/Projects.css";
 import JornadaDev from "../assets/page-trilha.png";
 import Portfolio from "../assets/pagePortfolio.png";
