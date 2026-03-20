@@ -1,4 +1,3 @@
-import React from 'react'
 import "../styles/components/skills.css"
 import iconreact from "../assets/iconreact.png"
 import iconhtml from "../assets/iconhtml.png"

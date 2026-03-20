@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/components/Projects.css";
+import "../styles/components/projects.css";
 import JornadaDev from "../assets/page-trilha.png";
 import Portfolio from "../assets/pagePortfolio.png";
 import Beverage from "../assets/projectBebidas.png";
@@ -69,7 +69,7 @@ export default function Projects() {
     {
       title: "JornadaDev",
       image: JornadaDev,
-      link: "https://felipeduartte.github.io/trilha-dev/",
+      link: "https://jornada-dev-virid.vercel.app/",
       description: "Page designed to help developers who are starting out.",
       features: [
         "Step-by-step learning platform",
@@ -151,7 +151,7 @@ const studyProjects = [
   {
       title: "MiniBlog",
       image: MiniBlog,
-      link: "https://github.com/FelipeDuartte/miniblog",
+      link: "https://felipeduartte.github.io/miniblog/",
       description: "Page designed to help developers who are starting out.",
       features: [
         "SPA (Single Page Application) navigation",
